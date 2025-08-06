@@ -6,7 +6,7 @@ const ContactPage = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-gray-900">Contact Us</h1>
-          <p className="text-lg text-gray-600 mt-2">We'd love to hear from you. Reach out to us for any inquiries or to discuss your next project.</p>
+          <p className="text-lg text-gray-600 mt-2">We&apos;d love to hear from you. Reach out to us for any inquiries or to discuss your next project.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

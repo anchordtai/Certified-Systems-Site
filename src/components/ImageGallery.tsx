@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const images = [
   { src: '/43-Inch-Portable-Outdoor-Digital-Signage-with-1500nits-IP65-Waterproof-Portable-Outdoor-Advertising-Player-Ad-Player-removebg-preview.png', alt: 'Digital Signage' },
@@ -19,7 +20,7 @@ const ImageGallery = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {images.map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <img src={image.src} alt={image.alt} className="w-full h-64 object-contain p-4" />
+              <Image src={image.src} alt={image.alt} width={400} height={300} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
           ))}
         </div>

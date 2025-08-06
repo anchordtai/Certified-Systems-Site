@@ -5,6 +5,7 @@ import React, { useEffect, useCallback, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
+import Image from "next/image";
 import "./carousel.css";
 
 const slides = [
@@ -56,10 +57,13 @@ export default function Carousel() {
         {slides.map((slide, index) => (
           <div className="embla__slide" key={index}>
             <div className="relative w-full h-[500px] group overflow-hidden">
-              <img
+              <Image
                 src={slide.imgSrc}
                 alt={slide.title}
-                className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105"
+                fill
+                sizes="100vw"
+                className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+                priority={index === 0} // Prioritize loading the first image
               />
               <div className="absolute bottom-0 left-0 w-full p-6 text-white transition-all duration-700 transform translate-y-8 bg-gradient-to-t from-black via-transparent to-transparent group-hover:translate-y-0">
                 <h2 className="text-2xl font-bold">{slide.title}</h2>

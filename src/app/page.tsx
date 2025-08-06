@@ -1,7 +1,7 @@
 import Carousel from "@/components/Carousel";
 import ServicesGrid from "@/components/ServicesGrid";
 import Testimonials from "@/components/Testimonials";
-import ImageGallery from "@/components/ImageGallery";
+
 
 export default function Home() {
   return (
